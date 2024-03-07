@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    background-color: #E5EAF5;
+}
+
+header {
+    text-align: center;
+    display: block;
+    background-color:#49485F; 
+    z-index: 99999;
+}
+
+.logo {
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+    background-color: #49485F;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+
+.product:nth-child(1) { grid-area: 1 / 1 / 2 / 2; }
+.product:nth-child(2) { grid-area: 1 / 2 / 2 / 3; }
+.product:nth-child(3) { grid-area: 2 / 1 / 3 / 2; }
+.product:nth-child(4) { grid-area: 2 / 2 / 3 / 3; }
+}
+  
+  .product {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+  }
+  
+  .product img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  .product-description {
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+  }
+
+
+main.container {
+  margin-bottom: 65px;
+}
+
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .button-group button {
+    padding: 8px;
+    background-color: #6772e5;
+    color: black;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    min-width: 120px;
+    height: 50px;
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center; 
+    
+  }
+  .button-group button:hover {
+    background-color: #49485F;
+    
+  }
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #49485F;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+footer a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border: 1px solid #49485F;
+    border-radius: 5px;
+    background-color: #49485F;
+}
+
+.footer-text {
+    color: white;
+    background-color: #49485F;
+}
