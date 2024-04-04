@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laptop Emporium - Home</title>
-    <link rel="stylesheet" href="css/review.css">
+    <title>Laptop Emporium - comparison-tool</title>
+    <link rel="stylesheet" href="css/comparisontool.css">
 </head>
 <body>
     <header>
@@ -13,15 +13,56 @@
         </a>
     </header>
 
+    <main class="container">
+        <div class="select-container">
+            <select id="laptop1">
+                <option value="">Select Laptop 1</option>
+                <option value="laptop1-specs">ASUS TUF A15 (2023)</option>
+                <option value="laptop3-specs">ASUS VivoBook 15 X515</option>
+                <option value="laptop5-specs">HP Victus 15.6</option>
+            </select>
+            <select id="laptop2">
+                <option value="">Select Laptop 2</option>
+                <option value="laptop2-specs">Acer Nitro Gaming Laptop</option>
+                <option value="laptop4-specs">Acer Chromebook 315, 15.6"</option>
+                <option value="laptop6-specs">ASUS ROG Strix G16 (2023)</option>
+
+            </select>
+            <button onclick="compareLaptops()">Compare</button>
+        </div>
+        <div id="comparisonResults" class="comparison-grid">
+            
+        </div>
+    </main>
+
     <footer>
         <div>
             <p class="footer-text">Laptop Emporium &copy; 2024</p>
         </div>
         <div>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="faq.html">FAQ</a>
+            <a href="community forum, about me page, contact page , FAQ.html">About Us</a>
+          <a href="community forum, about me page, contact page , FAQ.html">Contact Us</a>
+          <a href="community forum, about me page, contact page , FAQ.html">FAQ</a>
         </div>
     </footer>
+    <script>
+        function compareLaptops() {
+            var laptop1 = document.getElementById('laptop1').value;
+            var laptop2 = document.getElementById('laptop2').value;
+            
+            var specs = {
+                'laptop1-specs': '<img src="media/banners-and-pictures/general2.webp"" alt="Laptop 1 Image"><div><h2>ASUS TUF A15 (2023)</h2><p>Gaming Laptop, 15.6” FHD 144Hz, 100% sRGB Display, GeForce RTX 4050,AMD Ryzen 9 7940HS, 16GB DDR5, 512GB PCIe SSD, Wi-Fi 6,Windows 11, FA507XU-AS91-CA | Mecha Grayp </div>',
+                'laptop2-specs': '<img src="media/banners-and-pictures/general3.webp" alt="Laptop 2 Image"><div><h2>Acer Nitro Gaming Laptop</h2><p>15.6" FHD 144Hz Display, Intel i5-12450H, RTX 3050,16GB RAM, 512GB SSD (1 yr Manufacturer Warranty)</p></div>',
+                'laptop3-specs': '<img src="media/banners-and-pictures/education3.webp" alt="Laptop 3 Image"><div><h2>ASUS VivoBook 15 X515</h2><p>Thin and Light Laptop, 15.6” HD Display,Intel Pentium,4GB RAM,128GB SSD,Windows 11 Home in S Mode + 1 Year Microsoft 365 Personal, X515MA-AH09-CA</p></div>',
+                'laptop4-specs': '<img src="media/banners-and-pictures/education4.webp" alt="Laptop 4 Image"><div><h2>Acer Chromebook 315, 15.6"</h2><p>HD Widescreen, Intel Celeron N4020, 4GB LPDDR4, 64GB eMMC, Chrome OS, CB315-3H-C0UU</p></div>',
+                'laptop5-specs': '<img src="media/banners-and-pictures/general4.webp" alt="Laptop 5 Image"><div><h2>Acer HP Victus 15.6</h2><p>144Hz FHD Gaming Laptop, Intel Core i5-13420H Processor, 32GB RAM, 1TB PCIe SSD, NVIDIA GeForce RTX 3050, Backlit Keyboard,HD Webcam, Windows 11, Blue, 32GB Hotface USB Card.</p></div>',
+                'laptop6-specs': '<img src="media/banners-and-pictures/general1.webp" alt="Laptop 6 Image"><div><h2>ASUS ROG Strix G16 (2023)</h2><p>Gaming Laptop, 16” Nebula Display 16:10 QHD+ 240Hz,GeForce RTX 4060, Intel Core i9-13980HX, 16GB DDR5, 1TB PCIe SSD,Wi-Fi 6E, Windows 11, G614JV- DB91-CA</p></div>',
+            };
+            
+            var comparisonResults = document.getElementById('comparisonResults');
+            comparisonResults.innerHTML = specs[laptop1] ? specs[laptop1] : '';
+            comparisonResults.innerHTML += specs[laptop2] ? specs[laptop2] : '';
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+header {
+    text-align: center;
+    display: block;
+    background-color:#49485F; 
+    z-index: 99999;
+}
+
+.logo {
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #eceff1;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    background-color: #fff;
+}
+.comparison-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.comparison-grid img {
+    width: 300px; 
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.comparison-grid div {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 48%;
+}
+
+.select-container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.select-container select {
+    width: 90%;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+}
+.compare-button-container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+button {
+    padding: 1rem 2rem;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #49485F;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+footer a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.footer-text {
+    color: white;
+}
